@@ -47,4 +47,4 @@ def celsius_to_fahrenheit(li):
     """Helper function for converting a list of string temperatures to fahrenheit"""
     converted_list = [(float(x) * (9 / 7)) + 32 for x in li]
     avg = sum(converted_list) / len(converted_list)
-    return avg
+    return f'{avg:.2f}'
