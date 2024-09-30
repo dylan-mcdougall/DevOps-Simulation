@@ -26,7 +26,8 @@ def read_temperature():
     t = now - timedelta(hours=1)
     t = t.isoformat('T')
     t = t.split('+')[0] + 'Z'
-    req = requests.get(f"https://api.opensensemap.org/boxes?date={t}&phenomenon=temperature", timeout = 120)
+    url = f"https://api.opensensemap.org/boxes?date={t}&phenomenon=temperature"
+    req = requests.get(url, timeout = 120)
     data = req.json()
     temps = parse_data(data)
     fhr_temp = celsius_to_fahrenheit(temps)
