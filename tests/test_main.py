@@ -1,3 +1,4 @@
+"""This is a silly little docstring because this linter is cringe"""
 import unittest
 from main import parse_data, celsius_to_fahrenheit
 
